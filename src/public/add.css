@@ -1,0 +1,108 @@
+.content {
+    display: flex;
+    block-size: 100dvh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.form {
+    inline-size: 100%;
+    max-inline-size: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-inline-end: 1px solid white;
+    border-inline-start: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.form > div {
+    padding: 5px;
+    background-color: rgb(8, 8, 8);
+}
+
+.form__label {
+    display: flex;
+    font-size: 24px;
+    gap: 10px;
+}
+
+.form__input {
+    background-color: transparent;
+    border: 0;
+    border-block-end: 1px solid white;
+    inline-size: 100%;
+    transition: background-color .3s, color .3s;
+    font-size: 20px;
+    font-family: inherit;
+    color: white;
+    padding-inline-start: 5px;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__input:focus-visible {
+    background-color: white;
+    color: black;
+}
+
+.form__title {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.form__div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form__add-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form__textarea {
+    border: 1px solid white;
+    background-color: transparent;
+    resize: none;
+    overflow-y: scroll;
+    cursor: default;
+    color: white;
+}
+
+.form__textarea:focus {
+    outline: none;
+}
+
+.form__button {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+    border: 0;
+    padding: 5px 0px;
+    transition: background-color .3s, outline .3s, color .3s;
+}
+
+.form__button:hover {
+    background-color: black;
+    outline: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
