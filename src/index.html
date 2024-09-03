@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maid_mad</title>
+</head>
+
+<body>
+    <div class="content">
+        <header class="header">
+            <img class="header__logo" src="#" alt="alt">
+            <h1 class="header__title">maid_store</h1>
+            <button class="button header__button" type="button">+</button>
+        </header>
+        <ul class="stream__list">
+            <li class="stream__item">
+                <span class="stream__status">Здесь пусто...</span>
+            </li>
+        </ul>
+    </div>
+    <template id="stream">
+        <li class="stream">
+            <h2 class="stream__title"></h2>
+            <p class="stream__status"></p>
+            <p class="stream__date"></p>
+            <ul class="stream__link-list">
+
+            </ul>
+            <ul class="stream__timestep-list">
+
+            </ul>
+        </li>
+    </template>
+
+    <div class="modal modal_hidden">
+        <form class="form form-stream" name="stream-add">
+            <label class="form__label">
+                Название
+                <input class="form__input" type="text" name="title" required minlength="1" maxlength="25"
+                    pattern="^[A-Za-zА-Яа-яЁё\s]+$">
+                <span class="form__error"></span>
+            </label>
+            <label class="form__label">
+                Дата
+                <input class="form__input" type="text" name="date" required minlength="10" maxlength="10"
+                    placeholder="01.01.2024">
+                <span class="form__error"></span>
+            </label>
+            <label class="form__label">
+                Статус
+                <input class="form__checkbox" type="checkbox" name="status">
+            </label>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Ссылки</legend>
+                <div class="form__fieldset-content">
+                    <button class="button form__button-add" type="button">+</button>
+                    <label class="form__label">
+                        изменить
+                        <input class="form__block-state" type="checkbox">
+                    </label>
+                    <div class="form__block">
+                        <textarea class="form__textarea form__link-textarea" name="link-ta" disabled></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Моменты</legend>
+                <div class="form__fieldset-content">
+                    <button class="button form__button-add" type="button">+</button>
+                    <label class="form__label">
+                        изменить
+                        <input class="form__block-state" type="checkbox">
+                    </label>
+                    <div class="form__block">
+                        <textarea class="form__textarea form__timestep-textarea" name="timestep-ta" disabled></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <input class="button form__button-submit" type="submit" value="Создать">
+        </form>
+    </div>
+
+    <div class="modal modal_hidden modal-create-timestep">
+        <form class="form form-timestep">
+            <label class="form__label">
+                Время
+                <input class="form__input" name="timestep-time" type="text" minlength="1" maxlength="15"
+                    placeholder="00:05:12">
+            </label>
+            <label class="form__label">
+                Описание
+                <input class="form__input" name="timestep-description" type="text" minlength="1" maxlength="30"
+                    placeholder="ругает модера">
+            </label>
+            <span class="form__error"></span>
+            <input class="button form__button-submit" type="button" value="Добавить">
+        </form>
+    </div>
+
+    <div class="modal modal_hidden modal-create-link">
+        <form class="form form-link">
+            <label class="form__label">
+                Наименование ресурса
+                <input class="form__input" name="link-name" type="text" minlength="1" maxlength="15"
+                    placeholder="YouTube">
+                <span class="form__error"></span>
+            </label>
+            <label class="form__label">
+                Ссылка
+                <input class="form__input" name="link-url" type="url" placeholder="https://youtube.com">
+                <span class="form__error"></span>
+            </label>
+            <input class="button form__button-submit" type="submit" value="Добавить">
+        </form>
+    </div>
+</body>
+
+</html>

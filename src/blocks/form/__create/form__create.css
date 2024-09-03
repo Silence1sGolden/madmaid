@@ -1,0 +1,7 @@
+.form__create {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    block-size: 100%;
+    overflow: hidden;
+}

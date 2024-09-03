@@ -1,0 +1,7 @@
+.stream__list {
+    inline-size: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
